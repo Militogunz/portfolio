@@ -356,8 +356,75 @@ color: #25D366;
   .contact-options a {
     font-size: 1rem;
   }
-  
-  
+ /* ---- UNIVERSAL MOBILE RESPONSIVENESS ---- */
+
+/* Phones: 480px and below */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .home-section,
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-options a {
+    font-size: 1rem;
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* Regular Smartphones (iPhone X, 11, 12, 13, 14, Samsung, Infinix etc.) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-container {
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+/* Tablets (iPad, Samsung Tab, etc.) */
+@media (max-width: 1024px) {
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+}
+
 }
 
 /* small visibility animation classes used by script.js */
