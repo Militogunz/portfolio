@@ -7,6 +7,17 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
   });
 });
+// Responsive mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('active');
+  });
+}
+
 
 // Simple fade-in animation on scroll
 const elements = document.querySelectorAll('section');
