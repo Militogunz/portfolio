@@ -329,7 +329,7 @@ color: #25D366;
 .icon.up { background: #108A00; }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 900px) {
+@media (max-width: 320px) {
   .home-section {
     flex-direction: column;
     text-align: center;
@@ -340,7 +340,7 @@ color: #25D366;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 320px) {
   .navbar {
     flex-direction: column;
     gap: 10px;
@@ -356,6 +356,8 @@ color: #25D366;
   .contact-options a {
     font-size: 1rem;
   }
+  
+  
 }
 
 /* small visibility animation classes used by script.js */
