@@ -328,65 +328,34 @@ color: #25D366;
 .icon.tw { background: #1DA1F2; }
 .icon.up { background: #108A00; }
 
-/* === RESPONSIVE MENU (HAMBURGER) === */
-
-.menu-toggle {
-    display: none;
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .home-section {
     flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    z-index: 999;
+    text-align: center;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-.menu-toggle span {
-    width: 30px;
-    height: 4px;
-    background: #fff;
-    border-radius: 5px;
-    transition: 0.4s ease;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 80px;
-        right: -100%;
-        width: 60%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(6px);
-        display: flex;
-        flex-direction: column;
-        padding-top: 40px;
-        gap: 20px;
-        transition: 0.5s ease;
-    }
-
-    .nav-links.open {
-        right: 0;
-    }
-
-    .nav-links a {
-        color: white;
-        font-size: 1.2rem;
-        padding: 10px 20px;
-    }
-
-    /* Hamburger Animation */
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links a {
+    margin-left: 10px;
+  }
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-options a {
+    font-size: 1rem;
+  }
 }
 
 
