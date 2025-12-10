@@ -447,6 +447,23 @@ h2::after {
   background: #1877F2;
 }
 
+<<<<<<< HEAD
+/* ---- UNIVERSAL MOBILE RESPONSIVENESS ---- */
+
+/* Phones: 480px and below */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 2rem;
+  }
+
+  .home-section,
+=======
 .icon.wa {
   background: #25D366;
 }
@@ -463,37 +480,130 @@ h2::after {
   background: #ea4335;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
 @media (max-width: 900px) {
   .home-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    /* Put text below 3D on mobile/tablet if needed, or keeping normal logic */
     text-align: center;
+    padding-top: 120px;
   }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+>>>>>>> 3458438 (Refactor: Multi-page structure, Responsive Design, Dark Mode, 3D Integration)
   .about-container {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
-}
+<<<<<<< HEAD
 
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-links a {
-    margin-left: 10px;
-  }
   .projects-grid,
   .pricing-grid,
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
   .contact-options a {
     font-size: 1rem;
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* Regular Smartphones (iPhone X, 11, 12, 13, 14, Samsung, Infinix etc.) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 0.1rem;
+  }
+
+  .home-section h1 {
+    font-size: 2rem;
+  }
+
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-container {
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+/* Tablets (iPad, Samsung Tab, etc.) */
+@media (max-width: 1300px) {
+  .projects-grid,
+  .pricing-grid,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    padding: 20px;
+  }
+  .robot-3d{
+    scale: 0.08;
+    top: -20%;
+    right: 2%;
   }
 }
 
 
-/* small visibility animation classes used by script.js */
-.hidden { opacity: 0; transform: translateY(10px); transition: all 600ms ease; }
-.visible { opacity: 1; transform: translateY(0); }
+=======
+
+  .about-img img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg-card);
+    flex-direction: column;
+    padding: 5rem 2rem;
+    transition: 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .home-3d {
+    height: 400px;
+    /* Smaller height for mobile */
+    width: 100%;
+  }
+}
+
+/* Animation Classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+>>>>>>> 3458438 (Refactor: Multi-page structure, Responsive Design, Dark Mode, 3D Integration)
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
