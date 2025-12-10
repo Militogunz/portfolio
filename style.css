@@ -123,6 +123,7 @@ ul {
   width: 50px;
   border-radius: 50%;
   object-fit: cover;
+   color: #0ecf9f;
 }
 
 .logo {
