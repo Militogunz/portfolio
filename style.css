@@ -447,7 +447,22 @@ h2::after {
   background: #1877F2;
 }
 
-<<<<<<< HEAD
+.icon.wa {
+  background: #25D366;
+}
+
+.icon.ig {
+  background: #E4405F;
+}
+
+.icon.tw {
+  background: #1DA1F2;
+}
+
+.icon.email {
+  background: #ea4335;
+}
+
 /* ---- UNIVERSAL MOBILE RESPONSIVENESS ---- */
 
 /* Phones: 480px and below */
@@ -461,90 +476,92 @@ h2::after {
     margin-left: 0;
     font-size: 2rem;
   }
+}
 
-  .home-section,
-  =======.icon.wa {
-    background: #25D366;
-  }
-
-  .icon.ig {
-    background: #E4405F;
-  }
-
-  .icon.tw {
-    background: #1DA1F2;
-  }
-
-  .icon.email {
-    background: #ea4335;
-  }
-
-  /* =========================================
-   RESPONSIVE DESIGN
+/* =========================================
+   RESPONSIVE DESIGN (Tablets/Desktops)
    ========================================= */
-  @media (max-width: 900px) {
-    .home-section {
-      flex-direction: column-reverse;
-      /* Put text below 3D on mobile/tablet if needed, or keeping normal logic */
-      text-align: center;
-      padding-top: 120px;
-    }
-
-    .home-content h1 {
-      font-size: 2.5rem;
-    }
-
-    >>>>>>>3458438 (Refactor: Multi-page structure, Responsive Design, Dark Mode, 3D Integration) .about-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .about-img img {
-      margin: 0 auto;
-    }
+@media (max-width: 900px) {
+  .home-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 120px;
   }
 
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
-      z-index: 1001;
-    }
-
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 70%;
-      height: 100vh;
-      background: var(--bg-card);
-      flex-direction: column;
-      padding: 5rem 2rem;
-      transition: 0.3s ease;
-      z-index: 1000;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .nav-links.open {
-      right: 0;
-    }
-
-    .home-3d {
-      height: 400px;
-      /* Smaller height for mobile */
-      width: 100%;
-    }
+  .home-content h1 {
+    font-size: 2.5rem;
   }
 
-  /* Animation Classes */
-  .hidden {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
 
-
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
+  .about-img img {
+    margin: 0 auto;
   }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: var(--bg-card);
+    flex-direction: column;
+    padding: 5rem 2rem;
+    transition: 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .home-3d {
+    height: 400px;
+    width: 100%;
+  }
+
+  /* Horizontal Scrolling for Grids on Mobile */
+  .skills-grid,
+  .projects-grid,
+  .pricing-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    /* Space for scrollbar */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .skill-card,
+  .project-card,
+  .price-card {
+    min-width: 280px;
+    /* Ensure cards don't shrink too much */
+    scroll-snap-align: center;
+  }
+}
+
+/* Animation Classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
